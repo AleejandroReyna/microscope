@@ -1,3 +1,5 @@
+----------------- Configuración inicial -------------------------
+
 1. Crear aplicación en meteor en consola
 
   -> meteor create microscope //microscope es el nombre de la app
@@ -28,3 +30,44 @@
 *****************************************************************
 Se utiliza camelCase sobre underscore por cuestiones de costumbre
 *****************************************************************
+
+-------- Creando las vistas del lado del cliente --------------
+
+1. la etiqueta {{> postList }} (se les denomina, inclusiones) nos indica que un valor será
+  desplegado, debe asignarse en el lugar correcto.
+
+2. Creamos una carpeta específica para los templates (partials/components) del elemento
+  "posts", llamaremos a la primer carpeta "templates" donde estarán todos los templates
+  necesarios y dentro de ella colocaremos la carpeta "posts", en la cual estará el html
+  correspondiente a los template.
+
+3. En la carpeta posts, crearemos el archivo post_list, donde estará el template para
+  mostrar todos los posts.. ( :
+
+  Aquí con un {{#each post}} iteramos entre los valores del objeto postItem, y en el cual
+  mostramos el resultado en el valor {{> postItem}}.
+
+4. Creamos el archivo post_item, donde estará el template de cada item de los post, el cual
+  contendrá una etiqueta {{url}} con su dirección, {{title}} con su título y {{domain}} con el
+  valor de dominio.
+
+  el atributo name="postsList" en el template, es el que usa meteor para saber que
+  template debe renderizar en la sección donde es llamado.
+
+
+---------------------------------------------------------- > Tratando sobre helpers
+
+En palabras cortas, ayudarán a mejorar la forma en que la data puede verse en el documento final.
+
+crearemos nuestro primer helper con la ayuda de posts_list.js
+
+Podemos ver a nuestro helper creado "post", para utilizar el contenido de la variable "postData"
+en cualquiera de nuestros templates.
+
+---------------------------------------------------------- > Tratando sobre helpers
+
+OBSERVACIONES:
+
+  - Al tener una carpeta denominada "cliente" meteor asume que esta es la carpeta raiz
+  - Al tener denominado un archivo "main.html" hará de cuenta que es el index de la carpeta
+  - A la hora de incluir un template, no importa en que carpeta este se encuentre
