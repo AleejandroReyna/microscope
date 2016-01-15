@@ -102,5 +102,8 @@ javascript.
 
 5. limpiaremos la base de datos para no tener registros por ahora con "meteor reset" en consola.
 
-6, añadiremos en la base de datos los post que usábamos de ejemplo en un archivo por aparte, del lado del
+6. añadiremos en la base de datos los post que usábamos de ejemplo en un archivo por aparte, del lado del
   servidor llamado fixtures.js (server/fixtures.js)
+
+7. Por último, añadiremos en el helper la función necesaria para que nos devuelva los elementos de la
+  colección. (client/templates/posts/post_list.js)
