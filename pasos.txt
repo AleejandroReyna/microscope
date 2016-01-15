@@ -71,3 +71,10 @@ OBSERVACIONES:
   - Al tener una carpeta denominada "cliente" meteor asume que esta es la carpeta raiz
   - Al tener denominado un archivo "main.html" hará de cuenta que es el index de la carpeta
   - A la hora de incluir un template, no importa en que carpeta este se encuentre
+  _______________________________________________________________________________________
+
+  5. Creamos el helper para la url del post.. Nos devolverá unicamente el dominio, creando una
+    etiqueta a en memoria, asignándole como url la url del post en el template, y devolviéndonos
+    el hostname de la etiqueta a.
+
+  
