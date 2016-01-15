@@ -77,4 +77,30 @@ OBSERVACIONES:
     etiqueta a en memoria, asignándole como url la url del post en el template, y devolviéndonos
     el hostname de la etiqueta a.
 
-  
+
+
+==========================================================================================
+================================== COLECCIONES ===========================================
+==========================================================================================
+
+Una colección es una base de datos en meteor.. Maneja mongo db, gestor de base de datos en
+javascript.
+
+1. Crearemos una colección llamada Posts, en el archivo posts.js en la carpeta collections
+  dentro de la carpeta lib.. Con "Posts = new Mongo.Collection('posts');"
+
+  //No se utiliza var, dado qué, eso lo limita al documento, mientras que una variable
+  //global, permite la ejecución en todo el servidor
+
+2. se insertará un post de prueba, para familiarizarse con los métodos: db.posts.insert({title: "A new post"});
+
+3. Podemos ver el contenido de la tabla posts con: db.posts.find();
+
+4. Desde la consola del navegador creamos un post nuevo con: Posts.insert({title: "A second post"});
+  Y podemos ver que este elemento no solo se crea en la base de datos en caché, sino que crea el registro
+  en la base de datos en el servidor.
+
+5. limpiaremos la base de datos para no tener registros por ahora con "meteor reset" en consola.
+
+6, añadiremos en la base de datos los post que usábamos de ejemplo en un archivo por aparte, del lado del
+  servidor llamado fixtures.js (server/fixtures.js)
