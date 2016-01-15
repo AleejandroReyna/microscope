@@ -107,3 +107,13 @@ javascript.
 
 7. Por último, añadiremos en el helper la función necesaria para que nos devuelva los elementos de la
   colección. (client/templates/posts/post_list.js)
+
+  ==========================================================================================
+  ================================== AUTOPUBLISH ===========================================
+  ==========================================================================================
+
+Autopublish es un paquete que permite que el cliente pueda acceder a toda la base de datos, en
+desarrollo puede ayudarnos a formar toda la interacción, pero, en producción podría permitir que
+cualquier usuario pudiera obtener la data que quisiera..
+
+Lo retiraremos..
