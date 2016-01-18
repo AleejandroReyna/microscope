@@ -133,3 +133,27 @@ Meteor trabaja fundamentalmente con los datos en metodología DDP (Distributed D
   ==========================================================================================
   ================================= /AUTOPUBLISH ===========================================
   ==========================================================================================
+
+  ==========================================================================================
+  ================================== IRON ROUTER ===========================================
+  ==========================================================================================
+
+En la mayoría de apps, necesitaremos url's individuales para cada post, de esta manera podremos
+acceder a ellos sin tener en cuenta los demás datos, y para el routing, necesitamos un router,
+utilizaremos iron router, y utilizaremos de identificador de la url el id.
+
+1. Instalar iron router (meteor add iron:router)
+
+La idea de utilizar rutas, también nos permite especificar templates que siempre tienen un patrón
+y actualizar únicamente el contenido en su interior, para esto se utilizaría una sección para las
+casillas ({{> yield}}), se utiliza un helper para ello.
+
+2. Creamos la carpeta application, y en su interior el layout (layout.html) el cual se repetirá,
+  mientras que en main.html, sólo dejaremos el head de nuestro website. cambiaremos también "postList"
+  por "yield".
+
+3. también cambiaremos las etiquetas "body" por "template", y al template le asignaremos un
+nombre (name="layout"), así se identificará meteor de que llamamos a ese layout.
+
+4. Crearemos un archivo dentro de la carpeta lib llamado router.js, el cual se encargará de
+  especificar las rutas para que la app funcione cómo esperamos.
