@@ -123,4 +123,13 @@ Ahora el cliente deberea suscribirse para poder acceder a los datos de la base d
 1. En la carpeta server, crearemos un archivo llamado "publications.js" en el cual enviaremos
   la base de datos a publicarse.
 
-2. En la carpeta client, en main.js haremos que el cliente se suscriba a esa base de datos (Meteor.subscribe('posts');)
+2. En la carpeta client, en main.js haremos que el cliente se suscriba a esa base de
+  datos (Meteor.subscribe('posts');)
+
+Meteor trabaja fundamentalmente con los datos en metodología DDP (Distributed Data Protocol) por
+  lo cual, podemos regular la data enviada al cliente, y que este puede recibir para hacer la
+  interacción entre él y el servidor.
+
+  ==========================================================================================
+  ================================= /AUTOPUBLISH ===========================================
+  ==========================================================================================
