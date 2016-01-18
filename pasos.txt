@@ -157,3 +157,10 @@ nombre (name="layout"), así se identificará meteor de que llamamos a ese layou
 
 4. Crearemos un archivo dentro de la carpeta lib llamado router.js, el cual se encargará de
   especificar las rutas para que la app funcione cómo esperamos.
+
+5. En la configuración del Router, crearemos la suscripción de los post. (waitOn: function() {return Meteor.subscribe('posts');})
+
+6. Asignaremos también un template loading, que estará visible mientras los posts estén cargando.
+
+7. agregaremos un paquete de spinners para el template de carga.. (meteor add sacha:spin ) y lo usaremos
+  en el template de loading.
