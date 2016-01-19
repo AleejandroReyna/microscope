@@ -164,3 +164,25 @@ nombre (name="layout"), así se identificará meteor de que llamamos a ese layou
 
 7. agregaremos un paquete de spinners para el template de carga.. (meteor add sacha:spin ) y lo usaremos
   en el template de loading.
+
+8. Crearemos la ruta para el template de cada post individual y el template en si..
+
+  8.1 archivo en: "./client/posts/post_page.html"
+
+  8.2 en el router (Router.route('/posts/:_id', { name: 'postPage' });)
+
+  8.3 En el router se envía la data a visualizarse:
+
+    (data: function() { return Posts.findOne(this.params._id); })
+
+-------------------------->
+
+  Si hiciéramos una ruta por cada post, tendríamos que crear muchas y actualizarlas al día, por
+  lo cual creamos una ruta dinámica, donde toma el id para crear la ruta para cada post.
+
+-------------------------->
+
+  8.4 Crear un botón que hace referencia a la discusión en el foro, para que otras personas opinen
+    acerca de el, para esto usaremos la ruta, crearemos un botón en el template del item.
+
+    (<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>)
