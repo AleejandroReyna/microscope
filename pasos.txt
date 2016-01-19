@@ -196,3 +196,10 @@ nombre (name="layout"), así se identificará meteor de que llamamos a ese layou
   devuelva un objeto en blanco, o vacio, al igual que un false o undefined.
 
   (Router.onBeforeAction('dataNotFound', {only: 'postPage'});) //al final del router
+
+  ==========================================================================================
+  ==================================== SESIONES ============================================
+  ==========================================================================================
+
+Las sesiones nos permiten llevar un control del acceso que damos en nuestra aplicación hacia el
+cliente.
