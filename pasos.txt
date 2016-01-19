@@ -236,6 +236,26 @@ paquetes de meteor ya hechos para ayudarnos con la autentificación..
               (se puede comprobar en browser console: Meteor.users.findOne();)
                 ------------------------------->
 
+
+
 ==========================================================================================
 =================================== /USUARIOS ============================================
+==========================================================================================
+
+==========================================================================================
+===================================== POST'S =============================================
+==========================================================================================
+
+    CREACIÓN DE POSTS
+      1. Se creará una ruta para el formulario del envío de data (submit form)
+          (Router.route('/submit', {name: 'postSubmit'});) en router.js
+
+      2. Se creará un link para enviar el contenido de la página en el header.
+          (<li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>)
+
+      3. Por último, crearemos el evento para que envíe la data del formulario.
+        Los detalles estarán en el archivo post_submit.js
+
+==========================================================================================
+==================================== /POST'S =============================================
 ==========================================================================================
