@@ -229,6 +229,13 @@ paquetes de meteor ya hechos para ayudarnos con la autentificación..
 5. Por último, le diremos a la app que utilice el username para iniciar las sesiones a través
   del archivo en "client/helpers/config.js" (ver su contenido).
 
+----------------->
+  al añadir el paquete "accounts" meteor creó una especial nueva colección"
+      para poder acceder a Meteor.users, la cual contiene los datos de los usuarios
+          para su interacción con ellos.
+              (se puede comprobar en browser console: Meteor.users.findOne();)
+                ------------------------------->
+
 ==========================================================================================
 =================================== /USUARIOS ============================================
 ==========================================================================================
