@@ -186,3 +186,13 @@ nombre (name="layout"), así se identificará meteor de que llamamos a ese layou
     acerca de el, para esto usaremos la ruta, crearemos un botón en el template del item.
 
     (<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>)
+
+9. Estableceremos también una ruta para el notfound, en el router le asignaremos el template.
+
+10. Crearemos también el archivo not_found.html en el directorio application, y ahí, crearemos
+  el template para el not found..
+
+11. Ajustaremos el Router para que también retorne el error 404 cuando la ruta postpages nos
+  devuelva un objeto en blanco, o vacio, al igual que un false o undefined.
+
+  (Router.onBeforeAction('dataNotFound', {only: 'postPage'});) //al final del router
