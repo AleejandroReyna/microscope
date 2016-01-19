@@ -201,5 +201,34 @@ nombre (name="layout"), así se identificará meteor de que llamamos a ese layou
   ==================================== SESIONES ============================================
   ==========================================================================================
 
-Las sesiones nos permiten llevar un control del acceso que damos en nuestra aplicación hacia el
-cliente.
+Las sesiones nos permiten llevar un control del funcionamiento de la aplicación de acuerdo
+al tipo de sesión que lleva, esto nos permite ejecutar o no procesos, mostrar u ocultar elementos
+en el cliente, acceder a secciones de la base de datos distintas y demás..
+
+==========================================================================================
+=================================== /SESIONES ============================================
+==========================================================================================
+
+
+==========================================================================================
+==================================== USUARIOS ============================================
+==========================================================================================
+
+Una aplicación por lo general necesitará usuarios para el acceso a distintas secciones, para
+que pueda publicar, comentar y demás y la vez, manejar data personal, integraremos dos
+paquetes de meteor ya hechos para ayudarnos con la autentificación..
+
+1. instalar ian:accounts (meteor add ian:accounts-ui-bootstrap-3)
+
+2. instalar account password (meteor add accounts-password)
+
+3. Crearemos un template propio para el header y lo retiraremos del layout principal.
+
+4. En el template del header, colocaremos los login buttons necesarios. ( {{> loginButtons}} )
+
+5. Por último, le diremos a la app que utilice el username para iniciar las sesiones a través
+  del archivo en "client/helpers/config.js" (ver su contenido).
+
+==========================================================================================
+=================================== /USUARIOS ============================================
+==========================================================================================
