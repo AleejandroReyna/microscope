@@ -7,7 +7,15 @@ Template.postSubmit.events({ //se especifican los eventos del Template postSubmi
       title: $(e.target).find('[name=title]').val() //parámetro título
     };
 
-    post._id = Posts.insert(post); //se crea un post a través del insert
-    Router.go('postPage', post); //Se redirige a la página del post creado
+    Meteor.call('postInsert', post, function(error, result) {
+    //se intenta llamar al método postInsert
+      if (error) //busca un error
+        return alert(error.reason); //Si encuentra errores devuelve el error
+
+      Router.go('postPage', {_id: result._id}); //se dirige al post creado
+    });
+
+    //post._id = Posts.insert(post); //se crea un post a través del insert
+    //Router.go('postPage', post); //Se redirige a la página del post creado
   }
 });

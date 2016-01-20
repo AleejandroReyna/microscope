@@ -292,6 +292,16 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
       7. Por último, ocultaremos el botón para crear un nuevo post si el usuario no está
         loggeado..
 
+      8. Crearemos un método para subir el post, el cual tendrá una condicional para verificar
+        que no hayan errores en el post. (ver post_submit.js)
+
+      9. instalar check para la verificación de equivalencia de tipo de datos (meteor add check)
+
+      10. validaremos en el archivo de la colección que los datos se ingresen correctamente,
+        insertaremos en el objeto el usuario creador, al igual que la fecha en que fue creado.
+        Al igual que insertaremos el post y devolveremos el id del post en la función para
+        que pueda ser visto por nosotros a la hora de ser creado. (check lib/collections/posts.js)
+
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
