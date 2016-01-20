@@ -259,3 +259,36 @@ paquetes de meteor ya hechos para ayudarnos con la autentificación..
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
+
+(((((((((((((((((((((((((((((((((((((((((INSECURE)))))))))))))))))))))))))))))))))))))))))
+
+Insecure nos permite la interacción desde el cliente/servidor, para que, el cliente pueda
+crear, editar, o eliminar contenido de ella sin necesariamente tener accesos, ya que
+insecure le permite tener todas las acciones necesarias para ello.
+
+Podemos crear toda la app con ella, y después sólo encargarnos de limitarla, o podemos
+quitar el paquete desde el inicio y hacer la interacción segura desde el desarrollo.
+
+en este caso, la quitaremos desde ahora: (meteor remove insecure)
+
+(((((((((((((((((((((((((((((((((((((((((/INSECURE)))))))))))))))))))))))))))))))))))))))))
+
+==========================================================================================
+===================================== POST'S =============================================
+==========================================================================================
+
+    CREACIÓN DE POSTS
+      4. Y sin insecure, tendremos que especificar en nuestra app que sólo podrán haber
+        posts si hay un usuario loggeado en la app, de lo contrario nuestra app no lo
+        permitirá. (checar lib/collections/posts.js)
+
+      5. Necesitaremos crear también un template para el acceso denegado, que es lo que aparecerá
+        si en algún momento alguien sin la sesión abierta, quisiera crear
+        un nuevo post. (checar router.js)
+
+      6. Crearemos también una vista que será visible mientras el cliente verifica con el
+        servidor que haya un usuario loggeado a la app, re checar router.
+
+==========================================================================================
+==================================== /POST'S =============================================
+==========================================================================================
