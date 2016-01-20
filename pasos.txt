@@ -302,6 +302,11 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
         Al igual que insertaremos el post y devolveremos el id del post en la función para
         que pueda ser visto por nosotros a la hora de ser creado. (check lib/collections/posts.js)
 
+      11. Verificaremos que un post antiguo no tenga la misma url para que no hayan datos
+        duplicados. (check lib/collections/posts.js) Y retornaremos un objeto de ser así.
+
+      12. Crearemos una función que nos dirá que el post ya existe de ser así. (post_submit.js)
+
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================

@@ -12,6 +12,9 @@ Template.postSubmit.events({ //se especifican los eventos del Template postSubmi
       if (error) //busca un error
         return alert(error.reason); //Si encuentra errores devuelve el error
 
+      if (result.postExists) //verifica si el objeto result en el método postExists es verdadero
+        return alert('This link has already been posted');
+
       Router.go('postPage', {_id: result._id}); //se dirige al post creado
     });
 
