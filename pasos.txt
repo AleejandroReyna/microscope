@@ -289,6 +289,9 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
       6. Crearemos también una vista que será visible mientras el cliente verifica con el
         servidor que haya un usuario loggeado a la app, re checar router.
 
+      7. Por último, ocultaremos el botón para crear un nuevo post si el usuario no está
+        loggeado..
+
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
