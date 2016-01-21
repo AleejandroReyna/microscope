@@ -7,16 +7,26 @@ Template.postEdit.events({
       title: $(e.target).find('[name=title]').val() //toma el título del post
     }
 
-    Posts.update(currentPostId, {$set: postProperties}, function(error) {
+    Meteor.call("postEdit", currentPostId, postProperties, function(error, result){
+      if (error){
+        return alert(error.reason);
+      } else if (result.urlDuplicated) {
+        return alert("url duplicated");
+      } else {
+        Router.go('postPage', {_id: result._id});
+      }
+    });
+
+    //Posts.update(currentPostId, {$set: postProperties}, function(error) {
       //le enviamos el id para que sepa que post editar
       //$set los nuevos valores incluidos en la variable
       //function se ejecutará con el callback de update
-      if (error) { //Si hay error
-        alert(error.reason); //razón error
-      } else {
-        Router.go('postPage', {_id: currentPostId}); //Redirige al postpage con el id
-      }
-    });
+    //  if (error) { //Si hay error
+    //    alert(error.reason); //razón error
+    //  } else {
+    //    Router.go('postPage', {_id: currentPostId}); //Redirige al postpage con el id
+    //  }
+    //});
   },
 
   'click .delete': function(e) {
