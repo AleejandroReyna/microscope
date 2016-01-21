@@ -340,6 +340,14 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
       4. Usaremos un helper para decirle al edit post quien es el dueño del post {{ownPost}}
         y que solo este pueda editarlo.
 
+      5. creamos un archivo de permisos para establecer que el usuario puede editar el post
+        para editar la base de datos y acceder a ella.
+
+      6. En el archivo de la coleción, permitimos (allow()) que el usuario activo, de ser el creador
+        pueda editar el post.
+
+      7. En el mismo archivo, especificaremos que sólo pueden editar las opciones especificadas.
+
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
