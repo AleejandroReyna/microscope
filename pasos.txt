@@ -310,3 +310,36 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
+
+(((((((((((((((((((((((((((((((((((LATENCY COMPENSATION)))))))))))))))))))))))))))))))))))
+
+----> Checar Branch Latency
+
+  La manera en que meteor trabaja para los cambios en tiempo real es simulándolos a través
+  de la base de datos local, en el cual, muestra esos datos y ya colocados en la base de datos
+  real, ya muestra la data de esta, lo comprobamos poniendo una condicional en el lado de las
+  colecciones, para que nos mostrara la data del cliente mientras el servidor dormía un poco
+  para observar esa integración.
+
+(((((((((((((((((((((((((((((((((((/LATENCY COMPENSATION)))))))))))))))))))))))))))))))))))
+
+==========================================================================================
+===================================== POST'S =============================================
+==========================================================================================
+
+  Al crear la colección "Post", traemos con ella métodos para eliminar y editar posts.
+
+    EDICIÓN DE POSTS
+
+      1. Creamos la ruta para la edición de posts en el router.
+
+      2. Creamos el template para editar el post que se verá en la ruta creada. (post_edit.html)
+
+      3. Crearemos en el template un botón para acceder a la ruta para editar.
+
+      4. Usaremos un helper para decirle al edit post quien es el dueño del post {{ownPost}}
+        y que solo este pueda editarlo.
+
+==========================================================================================
+==================================== /POST'S =============================================
+==========================================================================================

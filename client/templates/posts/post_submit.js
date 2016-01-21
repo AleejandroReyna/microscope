@@ -14,9 +14,9 @@ Template.postSubmit.events({ //se especifican los eventos del Template postSubmi
 
       if (result.postExists) //verifica si el objeto result en el método postExists es verdadero
         return alert('This link has already been posted');
-
-      Router.go('postPage', {_id: result._id}); //se dirige al post creado
     });
+
+    Router.go('postsList'); //se dirige al post creado
 
     //post._id = Posts.insert(post); //se crea un post a través del insert
     //Router.go('postPage', post); //Se redirige a la página del post creado
