@@ -13,20 +13,9 @@ Template.postEdit.events({
       } else if (result.urlDuplicated) {
         return alert("url duplicated");
       } else {
-        Router.go('postPage', {_id: result._id});
+        Router.go('postPage', {_id: currentPostId});
       }
     });
-
-    //Posts.update(currentPostId, {$set: postProperties}, function(error) {
-      //le enviamos el id para que sepa que post editar
-      //$set los nuevos valores incluidos en la variable
-      //function se ejecutará con el callback de update
-    //  if (error) { //Si hay error
-    //    alert(error.reason); //razón error
-    //  } else {
-    //    Router.go('postPage', {_id: currentPostId}); //Redirige al postpage con el id
-    //  }
-    //});
   },
 
   'click .delete': function(e) {

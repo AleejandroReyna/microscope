@@ -348,6 +348,11 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
 
       7. En el mismo archivo, especificaremos que sólo pueden editar las opciones especificadas.
 
+      //extra bonus
+
+      8. Creamos un método al cual llamamos desde el template, el método comprobará que no haya
+        ya un post con la url de estar siendo editado, y de ser así nos retornará una alerta.
+
 ==========================================================================================
 ==================================== /POST'S =============================================
 ==========================================================================================
