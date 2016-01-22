@@ -9,9 +9,9 @@ Template.postEdit.events({
 
     Meteor.call("postEdit", currentPostId, postProperties, function(error, result){
       if (error){
-        return alert(error.reason);
+        return throwError(error.reason);
       } else if (result.urlDuplicated) {
-        return alert("url duplicated");
+        return throwError("url duplicated");
       } else {
         Router.go('postPage', {_id: currentPostId});
       }

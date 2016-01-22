@@ -366,7 +366,12 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
   2. Creamos un template para mostrar los errores (te,[;ates/includes/errors.html])
 
   3. Colocamos la llamada al template de los errores desde el layout para mostrar los errores
-    en cualquier vista.
+    en cualquier vista. (templates/application/layout.html)
+
+  4. Reemplazaremos nuestra alerta por nuestro template con mensajes de error.
+
+  5. Por último, para permitir múltiples mensajes de error, creamos una función para eliminar
+    el error de la base de datos del cliente, para poder mostrár las demás tras los 3 segundos.
 
 ==========================================================================================
 ==================================== /ERRORES ============================================
