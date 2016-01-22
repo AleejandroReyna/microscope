@@ -373,6 +373,21 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
   5. Por último, para permitir múltiples mensajes de error, creamos una función para eliminar
     el error de la base de datos del cliente, para poder mostrár las demás tras los 3 segundos.
 
+
+  //En creación del post
+
+    1. Establecemos en post_submit.js un objeto que se creará cuando se intente crear un post
+
+    2. establecemos dos helper que mostrarán el contenido del objeto de tener algo en él (error)
+
+    3. Colocaremos esos helper en el template para mostrarlos cuando haya un error.
+
+    4. En el archivo posts crearemos un método para validar el post y de no ser correcto,
+      desplegará los errores. (lib/collections/posts.js)
+
+    5. También crearemos una validación del lado del servidor en la colección (lib/collections/posts.js)
+      donde crearemos un error al haber inconvenientes en la creación del post.
+
 ==========================================================================================
 ==================================== /ERRORES ============================================
 ==========================================================================================
