@@ -7,5 +7,11 @@
           {{> commentItem}} <!-- Interactuará con los elementos dentro del helper -->
         {{/each}}
       </ul>
+
+      {{#if currentUser}}
+        {{> commentSubmit}}
+      {{else}}
+        <p>Please log in to leave a comment.</p>
+      {{/if}}
   </div>
 </template>
