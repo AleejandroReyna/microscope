@@ -423,6 +423,29 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
   9. instalamos el paquete en nuestra app desde consola (meteor add aleejandroreyna:errors)
 
   10. probamos el test (meteor test-packages aleejandroreyna:errors)
+
+  11. publicaremos nuestro package en atmosphere
+
+  12. Eliminamos los archivos de desarrollo y utilizamos el paquete en linea (no hecho)
 ==========================================================================================
 ==================================== /PACKAGES ===========================================
+==========================================================================================
+
+==========================================================================================
+===================================== COMMENTS ===========================================
+==========================================================================================
+
+La idea principal de este foro es que tenga permitido crear comentarios, los cuales se
+asocian al post y al usuario.
+
+  1. Crearemos la colección para los comentarios. (lib/collections/comments.js)
+
+  2. en fixtures.js (server) colocaremos contenido de prueba para desarrollar
+
+  3. Crearemos la subscripción a la colección para interactuar con ella. (server/publications.js)
+
+  4. también del lado del cliente (router.js)
+
+==========================================================================================
+==================================== /COMMENTS ===========================================
 ==========================================================================================
