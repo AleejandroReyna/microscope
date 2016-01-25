@@ -411,6 +411,18 @@ en este caso, la quitaremos desde ahora: (meteor remove insecure)
     (  api.addFiles(['file_01', 'file_02'], 'side');  )
 
   4. exportaremos la api para que pueda utilizarle *esencial?*.. (if(api.export) {content});
+
+  5. Crearemos el template que mostrará todos los errores. (errors_list.html)
+
+  6. Creamos la ejecución del package (errors_list.js)
+
+  7. Crearemos el testing, explicado en comentarios.. (errors_test.js)
+
+  8. lo adjuntamos en el archivo package.js, en la sección de testing.. (con las dependencias necesarias)
+
+  9. instalamos el paquete en nuestra app desde consola (meteor add aleejandroreyna:errors)
+
+  10. probamos el test (meteor test-packages aleejandroreyna:errors)
 ==========================================================================================
 ==================================== /PACKAGES ===========================================
 ==========================================================================================
