@@ -29,9 +29,11 @@ Template.postSubmit.events({ //se especifican los eventos del Template postSubmi
     Meteor.call('postInsert', post, function(error, result) {
     //se intenta llamar al método postInsert
       if (error) { //busca un error
-        return throwError(error.reason); //Si encuentra errores devuelve el error
+        Errors.throw(error.reason);
+        //return throwError(error.reason); //Si encuentra errores devuelve el error
       } else if (result.postExists){ //verifica si el objeto result en el método postExists es verdadero
-        return throwError('This link has already been posted');
+        Errors.throw('This link has already been posted');
+        //return throwError('This link has already been posted');
       } else {
           Router.go('postPage', {_id: result._id}); //se dirige al post creado
       }
