@@ -1,5 +1,11 @@
 <template name="postPage">
   <div class="post-page page">
       {{> postItem}}
+
+      <ul class="comments">
+        {{#each comments}} <!-- buscará el helper comments -->
+          {{> commentItem}} <!-- Interactuará con los elementos dentro del helper -->
+        {{/each}}
+      </ul>
   </div>
 </template>

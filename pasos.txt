@@ -442,9 +442,33 @@ asocian al post y al usuario.
 
   2. en fixtures.js (server) colocaremos contenido de prueba para desarrollar
 
+    2.1 Los comentarios tienen por ley un postId (unido al post que pertenece)
+
+    2.2 El userId (unido al usuario que lo creó)
+
+    2.3 El author (username perteneciente al userId)
+
+    2.4 un submitted (la fecha en que fue creado)
+
+    2.5 un body (el cual es el comentario como tal)
+
   3. Crearemos la subscripción a la colección para interactuar con ella. (server/publications.js)
 
   4. también del lado del cliente (router.js)
+
+  ******** Desplegar comentarios
+
+  5. en el template del post, crearemos el each para interactuar con los comentarios
+
+  6. en post_page.js creamos el helper para traer de la tabla los comentarios respectivos al post
+
+  7. Creamos el template para el Item de cada comentario.
+
+  8. Creamos un helper para mostrar la fecha de una mejor manera.
+
+  9. creamos un botón con el número de comentarios a través de un helper en el post item
+
+  10. Creamos el helper para mostrar el número de comentarios..
 
 ==========================================================================================
 ==================================== /COMMENTS ===========================================
