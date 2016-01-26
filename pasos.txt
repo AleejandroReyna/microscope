@@ -480,6 +480,24 @@ asocian al post y al usuario.
     3. en la colección creamos el método para insertar el comentario en la tabla.
       de no poderse, se establece el error. (lib/collections/comments.js)
 
+  ******************************************************************************
+  *** Extra bonus: Restringir la suscripción únicamente al post del comment ****
+  ******************************************************************************
+
+  A la hora de la creación de un post conectamos todos los comentarios a todos los posts
+  con todos los clientes conectados.. Esto podría afectar en la seguridad, los tiempos de
+  carga, o simplemente es demasiado para lo que en verdad necesitamos.
+
+  Lo primero que cambiaremos será la manera de suscribirse a la colección de comments de general
+  a que sólo se suscriba por página individual.
+
+  1. quitar la suscripción del router como inicial
+
+  2. Desde la función que devuelve la ruta del post, crearemos la suscripción específica para
+    los comentarios de únicamente ese post.
+
+    También en server/publications crearemos la función publish, para que retorne sólo los
+    comentarios de ese post.
 
 ==========================================================================================
 ==================================== /COMMENTS ===========================================
