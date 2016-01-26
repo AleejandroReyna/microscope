@@ -470,6 +470,17 @@ asocian al post y al usuario.
 
   10. Creamos el helper para mostrar el número de comentarios..
 
+  ******* Creación de post on submit
+
+    1. Creamos el template para el comment submit
+
+    2. en el comment_submit.js Creamos la variable de error, los helper y el call al método para
+      el envío del comentario.
+
+    3. en la colección creamos el método para insertar el comentario en la tabla.
+      de no poderse, se establece el error. (lib/collections/comments.js)
+
+
 ==========================================================================================
 ==================================== /COMMENTS ===========================================
 ==========================================================================================
