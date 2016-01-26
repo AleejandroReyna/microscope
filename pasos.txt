@@ -499,6 +499,15 @@ asocian al post y al usuario.
     También en server/publications crearemos la función publish, para que retorne sólo los
     comentarios de ese post.
 
+  3. Restringir los post hará que sólo podamos ver la colección en la url específica, por lo
+    cual el helper que nos mostraba cuantos comentarios habían en el post es inútil, los post
+    tendrán un contador de cuantos comentarios tienen el cual se insertará desde el postInsert.
+
+  4. Asignar en la colección comment una función en la cual editamos el post con el postId para
+    que su propiedad commentCount se incremente en uno.
+
+  5. borramos el helper que teníamos y dejamos que tome la propiedad asignada..
+
 ==========================================================================================
 ==================================== /COMMENTS ===========================================
 ==========================================================================================
