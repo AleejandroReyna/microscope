@@ -1,5 +1,9 @@
-Meteor.publish('posts', function() { //suscribción post
-  return Posts.find(); //retorna todos los post
+Meteor.publish('posts', function(options) { //suscribción post
+  check(options, {
+    sort: Object,
+    limit: Number
+  })
+  return Posts.find({}, options); //retorna todos los post
 });
 
 

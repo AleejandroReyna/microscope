@@ -1,3 +1,4 @@
+/*
 var postsData = [ {
     title: 'Introducing Telescope',
     url: 'http://sachagreif.com/introducing-telescope/'
@@ -16,3 +17,4 @@ Template.postsList.helpers({
     return Posts.find({}, {sort: {submitted: -1}});
   }
 });
+*/

@@ -545,3 +545,27 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 ==========================================================================================
 ================================= /NOTIFICATIONS =========================================
 ==========================================================================================
+
+==========================================================================================
+=================================== PAGINATIONS ==========================================
+==========================================================================================
+
+  Para no mostrar una lista de post infinitos, mostraremos post de diez en diez y un botón
+  para que vaya mostrando los demás post.
+
+  1. Debemos retirar la suscripcion de los posts en el router.
+
+  2. creamos una ruta para definir el límite de los post en lista donde el número en la ruta
+    será el indicador de cuantos posts serán visibles en el listado. (router.js)
+
+  3. En las publicaciones, modificamos la publicación de posts para que reciba un parametro y
+    responda de acuerdo a estos (server/publications.js)
+
+  4. En la función waitOn retornaremos la suscripción, y en la función data retornaremos
+    el objeto generado por esa suscripción. (el cursor de posts)
+
+     //Así no necesitamos de helpers para retornar la suscripción de la colección.
+
+==========================================================================================
+================================== /PAGINATIONS ==========================================
+==========================================================================================
