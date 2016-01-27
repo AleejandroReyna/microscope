@@ -566,6 +566,10 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 
      //Así no necesitamos de helpers para retornar la suscripción de la colección.
 
+  5. Creamos un controlador de ruta, para ejecutar las funciones descritas arriba.. Pero
+    a través de una variable que se incrementará a través del botón, el controlador se
+    encargará de ejecutar la función de rutas dinámicamente.
+
 ==========================================================================================
 ================================== /PAGINATIONS ==========================================
 ==========================================================================================
