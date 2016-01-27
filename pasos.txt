@@ -519,7 +519,20 @@ asocian al post y al usuario.
 Las notificaciones son importantes para la continuidad y el seguimiento de lo que está
 pasando en el foro, meteor por defecto es real time, así que su integración será sencilla.
 
-  1. Crearemos una colección para las notificaciones. (lib/collections/notifications.)
+  1. Crearemos una colección para las notificaciones. (lib/collections/notifications.js)
+
+  2. En la colección establecemos que estará permitido para modificar
+
+  3. En la colección establecemos el método para la creación de la notificación a través
+    de un comentario.
+
+  4. En la colección de comentarios, en el método de commentInsert llamamos al método para
+    insertar una notificación en la colección.
+
+  5. Creamos la publicación del lado del servidor (server/publications.js)
+
+  6. Realizamos la suscripción en el router.js
+
 
 ==========================================================================================
 ================================= /NOTIFICATIONS =========================================
