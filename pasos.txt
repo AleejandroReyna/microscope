@@ -541,6 +541,7 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 
   9. en el archivo (notifications.js) establecemos los helper y los eventos para la interacción del feature.
 
+  10. restringimos la publicación de la base de datos con dos parámetros, para que solo devuelva las notificaciones no vistas del usuario activo
 ==========================================================================================
 ================================= /NOTIFICATIONS =========================================
 ==========================================================================================

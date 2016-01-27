@@ -9,5 +9,6 @@ Meteor.publish('comments', function(postId) { //suscripción comments recibe id 
 });
 
 Meteor.publish('notifications', function() {
-  return Notifications.find();
+  return Notifications.find({userId: this.userId, read: false});
+  //por los parámetros solo devolverá las notificaciones con el userId y que no han sido leídos
 });
