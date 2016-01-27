@@ -533,6 +533,13 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 
   6. Realizamos la suscripción en el router.js
 
+  // mostrar las notificaciones c:
+
+  7. Editar el header para que un dropdown contenga las notificaciones
+
+  8. Crearemos el template para enlistar los items de las notificaciones, y los items como tales (client/templates/comments/comments.html)
+
+  9. en el archivo (notifications.js) establecemos los helper y los eventos para la interacción del feature.
 
 ==========================================================================================
 ================================= /NOTIFICATIONS =========================================

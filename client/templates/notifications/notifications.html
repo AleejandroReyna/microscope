@@ -1,0 +1,26 @@
+ <template name="notifications">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Notifications
+    {{#if notificationCount}} <!-- Si existe notificación count (var > 0) -->
+      <span class="badge badge-inverse">{{notificationCount}}</span> <!-- mostrar el número -->
+    {{/if}}
+    <b class="caret"></b>
+  </a>
+  <ul class="notification dropdown-menu">
+    {{#if notificationCount}} <!-- Si existe notificación count (var > 0) -->
+      {{#each notifications}} <!-- itera entre las notificaciones -->
+        {{> notificationItem}} <!-- template para cada item -->
+      {{/each}}
+    {{else}} <!-- no notificaciones? -->
+      <li><span>No Notifications</span></li>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="notificationItem">
+  <li>
+    <a href="{{notificationPostPath}}">
+      <strong>{{commenterName}}</strong> commented on your post
+    </a>
+  </li>
+</template>
