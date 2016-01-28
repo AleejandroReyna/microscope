@@ -6,6 +6,11 @@ Meteor.publish('posts', function(options) { //suscribción post
   return Posts.find({}, options); //retorna todos los post
 });
 
+Meteor.publish('singlePost', function(id) { //la suscripción single post recibirá como parámetro el id del post a ver
+  check(id, String) //checará que ese id sea de tipo string
+  return Posts.find(id); //retornará el post con ese id específico
+});
+
 
 Meteor.publish('comments', function(postId) { //suscripción comments recibe id del post
   check(postId, String); //verifica que postId sea un string

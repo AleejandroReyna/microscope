@@ -574,6 +574,11 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
     la suscripción a la tabla, la cual retornará un true cuando esté lista, la que mostrará
     el spinner en la sección necesitada.
 
+  7. Al quitar la suscripción por defecto en el router, hemos hecho que no podamos ver
+    individualmente los posts a falta de parámetros en la ruta, suscripciones y publicaciones.
+    Creamos una publicación nueva del lado del servidor que esperará el id del post a devolver.
+
+  8. Establecemos la suscripción en la ruta para editar y para ver en el waitOn.
 ==========================================================================================
 ================================== /PAGINATIONS ==========================================
 ==========================================================================================
