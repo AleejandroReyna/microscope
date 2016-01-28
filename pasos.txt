@@ -570,6 +570,10 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
     a través de una variable que se incrementará a través del botón, el controlador se
     encargará de ejecutar la función de rutas dinámicamente.
 
+  6. En el controlador, crearemos una propiedad suscripción que asignará en una variable
+    la suscripción a la tabla, la cual retornará un true cuando esté lista, la que mostrará
+    el spinner en la sección necesitada.
+
 ==========================================================================================
 ================================== /PAGINATIONS ==========================================
 ==========================================================================================
