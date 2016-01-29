@@ -599,6 +599,9 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
   4. Agregamos el evento click para el botón, para llamar al método upvote
 
   5. Creamos el método upvote para la votación.
+
+  6. Creamos un helper que nos indica si el usuario activo ya votó, o si este no existe,
+    con esto desactivamos el botón en caso de que ya lo haya hecho.
 ==========================================================================================
 ===================================== /VOTING ============================================
 ==========================================================================================
