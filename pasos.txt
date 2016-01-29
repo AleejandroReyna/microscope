@@ -582,3 +582,23 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 ==========================================================================================
 ================================== /PAGINATIONS ==========================================
 ==========================================================================================
+
+==========================================================================================
+====================================== VOTING ============================================
+==========================================================================================
+
+  Haremos un sistema de votos práctico, donde cada item de la colección Posts() tendrá un
+  array con los votantes (upvoters) y el conteo de votos (votes).
+
+  1. Editaremos fixtures para crear automáticamente la lógica de los postItems
+
+  2. Permitiremos la edición de los upvoters y los votes desde la colección.
+
+  3. Agregamos el botón para votar en el template de post item
+
+  4. Agregamos el evento click para el botón, para llamar al método upvote
+
+  5. Creamos el método upvote para la votación.
+==========================================================================================
+===================================== /VOTING ============================================
+==========================================================================================
