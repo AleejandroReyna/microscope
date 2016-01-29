@@ -625,6 +625,8 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
     4. Creamos dos rutas, una para cada controlador (por el nombre automáticamente funcionarán adjuntos)
 
     5. colocamos en el header dos links para que muestre los post nuevos y los post más votados.
+
+    6. Creamos un helper en el menú del header, para mostrar la sección activa. (header.js y header.html)
 ==========================================================================================
 ===================================== /VOTING ============================================
 ==========================================================================================
