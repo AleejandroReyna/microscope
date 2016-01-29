@@ -605,6 +605,26 @@ pasando en el foro, meteor por defecto es real time, así que su integración se
 
   7. Crearemos un helper para no desplegar la palabra votes, sino vote, cuando solo haya
     un voto. Al igual que la palabra comment, en vez de comments.
+
+  8. modificamos el método para crear el voto, para que en una variable se guarde el callback
+    de la función para editar el post (agregar voto), y utilizar una comprobación más rápida.
+
+
+  Dividiendo las secciones entre nuevos y destacados ------------------------->
+
+    1. Extendemos el controlador inicial, donde cambiamos el valor del sort por defecto por
+      el dato que expandirá el controlador generado en base a él, al igual que la ruta que
+      recibirá el botón de "ver más".
+
+    2. Crearemos dos controladores basados en el controlador principal donde uno devolverá
+      el cursor de la colección ordenado basado en cuando fue creado y el segundo por número
+      de votos.
+
+    3. Creamos la ruta 'home', que tomará el resultado del primer controlador y lo desplegará.
+
+    4. Creamos dos rutas, una para cada controlador (por el nombre automáticamente funcionarán adjuntos)
+
+    5. colocamos en el header dos links para que muestre los post nuevos y los post más votados.
 ==========================================================================================
 ===================================== /VOTING ============================================
 ==========================================================================================
